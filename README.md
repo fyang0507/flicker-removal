@@ -96,6 +96,8 @@ The second private set, `photos/test/`, is reserved strictly for evaluation. Fre
 
 If the held-out set does not match the saved profile's camera or lighting assumptions, record that limitation or failure. Develop any adaptation on separate data, with a fresh unseen set for its final evaluation. See the [evaluation protocol](docs/evaluation.md).
 
+The first frozen holdout run processed 45 additional photos: 44 corrections, one confidence abstention, and 45/45 RAW-integrity passes. Residual variation and five chroma-diagnostic increases remain documented in the [aggregate evaluation report](docs/holdout-02.md).
+
 ## Color and RAW compatibility
 
 The DNG writer preserves camera white balance, color characterization, CFA geometry, black/white levels, crop and ordinary exposure metadata. EXIF uses the conventional directory layout required for correct ISO-dependent rendering in macOS Preview. Neutral comparison JPEGs do not reproduce Sony's Creative Look or an Adobe preset. Different RAW editors can still render colors differently.

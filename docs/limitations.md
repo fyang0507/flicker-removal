@@ -2,6 +2,8 @@
 
 The current method was developed on one private, 35-photo Sony Alpha 7 IV (ILCE-7M4) session: electronic shutter, ISO 1600, f/5, and shutter durations of 1/125, 1/160 and 1/200 s. The illumination was shared across that session. Successful correction there establishes a useful starting point, not general camera or lighting compatibility.
 
+A later [frozen holdout evaluation](holdout-02.md) tested 45 additional images from the same camera model at different capture settings. It did not tune the method or validate other cameras and arbitrary lighting.
+
 ## Camera and file support
 
 The CLI accepts ARW and Bayer DNG inputs. The writer requires an RGBG Bayer sensor, usable black/white levels, camera white balance and a nonsingular color matrix. It does not hard-code a Sony-only camera whitelist, but another camera passing those checks is still unvalidated. Sensor layout, crop, black levels, shutter behavior and native-editor rendering all need independent verification.
