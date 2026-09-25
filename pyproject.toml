@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flicker-removal"
+version = "0.1.0"
+description = "Deterministic session-calibrated Bayer flicker correction"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.12,<3.14"
+keywords = ["photography", "raw", "dng", "flicker", "banding"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Science/Research",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+    "rawpy==0.27.1",
+    "numpy==2.5.3",
+    "scipy==1.18.1",
+    "Pillow==12.3.0",
+    "tifffile==2026.9.20",
+    "exifread==3.5.1",
+]
+
+[project.urls]
+Repository = "https://github.com/fyang0507/flicker-removal"
+Issues = "https://github.com/fyang0507/flicker-removal/issues"
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.1.1",
+    "matplotlib==3.11.2",
+    "psutil==7.2.2",
+    "ruff==0.16.9",
+]
+scene = [
+    "opencv-python-headless==5.0.0.93",
+]
+
+[project.scripts]
+flicker-removal = "flicker_removal.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["flicker_removal*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--strict-markers --strict-config"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100

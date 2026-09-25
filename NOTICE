@@ -1,0 +1,37 @@
+Flicker-removal
+==============
+
+Project-owned code is distributed under the MIT license in LICENSE.
+That license does not relicense dependencies, camera profiles, model weights,
+source photographs, or other independently licensed material.
+
+Runtime dependencies
+--------------------
+The package uses rawpy (and its LibRaw decoder), NumPy, SciPy, Pillow,
+tifffile, and ExifRead. Optional scene-assisted processing uses OpenCV.
+ExifTool is an optional external executable. Each dependency retains its own
+license and notices. The project lockfiles record resolved versions; consult
+the distributions and upstream projects for their accompanying license terms.
+Dependencies are installed separately, not vendored in the project source.
+
+Implementation references
+-------------------------
+This product includes DNG technology under license by Adobe.
+The DNG writer follows Adobe's published Digital Negative specification:
+https://helpx.adobe.com/camera-raw/digital-negative.html
+
+RAW decoding uses rawpy's public API:
+https://letmaik.github.io/rawpy/api/rawpy.RawPy.html
+
+Sony maker-note interpretation is obtained through ExifTool:
+https://github.com/exiftool/exiftool/blob/master/lib/Image/ExifTool/Sony.pm
+
+No Adobe camera profiles, Sony camera software, or proprietary RAW decoding
+code are included in this repository.
+
+Private evaluation data
+-----------------------
+The original photographs, generated image outputs, and image-bearing scene
+references are local evaluation material and are not included in the public
+source or licensed for redistribution by this project. Private research records, source identifiers and hashes are excluded from the
+public source snapshot. The development journal contains a de-identified summary.

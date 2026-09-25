@@ -1,0 +1,41 @@
+# Environments, build output and caches
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.DS_Store
+
+# Private sessions and generated deliveries
+photos/
+data/
+outputs/
+runs/
+local/
+*.arw
+*.ARW
+*.dng
+*.DNG
+*.xmp
+*.XMP
+*.npy
+*.npz
+*.dcp
+*.icc
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Historical experiments may generate image-bearing or large binary assets.
+research/**/*.jpg
+research/**/*.jpeg
+research/**/*.png
+research/**/*.tif
+research/**/*.tiff
+research/**/*.log
+research/**/vendor/
+research/baselines/flickerformer/upstream/
+research/baselines/flickerformer/results/
