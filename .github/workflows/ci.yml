@@ -24,7 +24,7 @@ jobs:
         python: ["3.12", "3.13"]
     env:
       # Public CI never depends on the original, private camera fixture.
-      FLICKER_TEST_RAW: ${{ runner.temp }}/no-private-fixture.ARW
+      FLICKER_TEST_RAW: /tmp/flicker-ci-no-private-fixture.ARW
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      FLICKER_TEST_RAW: ${{ runner.temp }}/no-private-fixture.ARW
+      FLICKER_TEST_RAW: /tmp/flicker-ci-no-private-fixture.ARW
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
